@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fontawesome-free-6.4.2-web/css/all.min.css">
+    <script src="/sweetAlert/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-box">
+            <h2>Password generator</h2>
+
+            <div class="password-box">
+                <input type="text" id="field" readonly placeholder="Select options"> <i class="fa-solid fa-copy"></i>
+            </div>
+
+            <div class="box">
+                <label for="lowercase">Lowercase letters</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+
+            <div class="box">
+                <label for="uppercase">Uppercase letters</label>
+                <input type="checkbox" id="uppercase">
+            </div>
+
+            <div class="box">
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="box">
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" id="symbols">
+            </div>
+
+            <div class="box">
+                <label for="length">Length</label>
+                <input type="number" id="length" min="8" max="20" value="8">
+            </div>
+
+            <button id="generator-btn">Generator password</button>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>

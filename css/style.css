@@ -1,0 +1,116 @@
+:root {
+    --white: #f1f1f1;
+    --black: #1f1f1f;
+    --color-1: #4a0847;
+    --color-2: #942193;
+    --color-3: #e04ee7;
+    --font-color: #fbe9fe;
+    --bow: 3px;
+    --smooth: .3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    color: var(--font-color);
+}
+
+body {
+    font-family: Tahoma, Arial;
+}
+
+.container {
+    height: 100vh;
+    background: url(/images/galaxy-1.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.main-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22rem;
+    background-color: var(--color-1);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 6px;
+
+    .password-box {
+        position: relative;
+
+        & input[type="text"] {
+            background-color: var(--color-2);
+            padding: 6px;
+            font-size: 16px;
+            border: none;
+            border-radius: var(--bow);
+            outline: none;
+        }
+        & input[type="text"]::placeholder {
+            color: var(--font-color);
+        }
+
+        & i {
+            visibility: hidden;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: var(--smooth);
+        }
+    }
+
+    .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 12px;
+
+        & input[type="checkbox"] {
+            appearance: none;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid var(--color-2);
+            border-radius: var(--bow);
+            cursor: pointer;
+            transition: var(--smooth);
+        }
+        & input[type="checkbox"]:checked {
+            background-color: var(--color-3);
+            border-radius: 50%;
+        }
+
+        & input[type="number"] {
+            background-color: var(--color-2);
+            width: 3rem;
+            padding: 3px 5px;
+            font-size: 16px;
+            border: 1px solid;
+            border-radius: var(--bow);
+            outline: none;
+        }
+    }
+    & :is(h2, div) {
+        margin-bottom: 12px;
+    }
+
+    #generator-btn {
+        background-color: var(--color-1);
+        padding: 6px;
+        font-size: 16px;
+        color: var(--color-3);
+        border: 1px solid;
+        border-radius: var(--bow);
+        outline: none;
+        cursor: pointer;
+        transition: var(--smooth);
+    }
+    #generator-btn:hover {
+        color: var(--font-color);
+    }
+}
